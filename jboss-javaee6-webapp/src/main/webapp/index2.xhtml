@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- je na vypisanie pozdravu ak spravne vyplnim formular -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/default.xhtml">
+<!--  
+<head>
+<title>Main screen</title>
+</head>
+
+<a href='kamene'>n tiles</a>
+
+<a href='greeting.xhtml'>sdfdsfdfdf</a>
+	
+
+	
+</body>
+</html>
+-->
+
+<h:head>
+	<title>fsz</title>
+	<style>
+.invalid {
+	color: red
+}
+</style>
+</h:head>
+<h:body>
+<!--<body background="#{resource['images2:vizcsepp-a-toban-kep.jpg']}">  -->
+
+<a href='kamene'>n tiles</a>
+
+<a href='greeting.xhtml'>sdfdsfdfdf</a>
+
+<h:form>
+	<h:panelGrid columns="3">
+		
+		
+		
+		Name:
+		<h:inputText id="name" value="#{user.name}">
+			<f:validateLength minimum="5" maximum="10"></f:validateLength>
+		</h:inputText>
+		<h:message for="name" errorClass="invalid" />
+			
+
+		Password:
+		<h:inputText id="passwd" value="#{user.passwd}">
+			<f:validateLength minimum="5" maximum="10"></f:validateLength>
+		</h:inputText>
+		<h:message for="passwd" errorClass="invalid" />
+
+
+		<h:commandButton action="main.jsf" value="Send!" />
+
+	</h:panelGrid>
+
+</h:form>
+
+</h:body>
+</html>

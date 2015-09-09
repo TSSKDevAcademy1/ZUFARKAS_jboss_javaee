@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   
+-->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	template="/WEB-INF/templates/default.xhtml">
+<h:head>
+	<title>login screen gs</title>
+	<style>
+.invalid {
+	color: red
+}
+</style>
+</h:head>
+
+<h:body>
+
+	<h2>
+		<SPAN style='color: #000099'>Welcome to Game Studio!</SPAN>
+	</h2>
+	<p>Please enter your user name and password</p>
+	<h:form>
+		<h:panelGrid columns="3">
+		
+		
+		Username:
+		<h:inputText id="userName" value="#{userGS.userName}">
+				<f:validateLength minimum="5" maximum="10"></f:validateLength>
+			</h:inputText>
+			<h:message for="userName" errorClass="invalid" />
+			
+
+		Password:
+		<h:inputText id="password" value="#{userGS.password}">
+				<f:validateLength minimum="5" maximum="10"></f:validateLength>
+			</h:inputText>
+			<h:message for="password" errorClass="invalid" />
+
+			<h:commandButton action="mainGS.jsf" value="login" />
+			<!-- <h:commandButton action=tu zavolat metodu.login"mainGS.jsf" value="login" /> -->
+
+		</h:panelGrid>
+
+	</h:form>
+	<p><A href="registrationForm.xhtml">registration</A></p>
+
+</h:body>
+</html>

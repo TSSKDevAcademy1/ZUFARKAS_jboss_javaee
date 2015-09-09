@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- je na vypisanie pozdravu ak spravne vyplnim formular -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/default.xhtml">
+<head>
+<title>game screen</title>
+</head>
+<body>
+	<f:view>
+		<h2><SPAN style='color:#000099'>Hello #{userGS.userName}, let's play!</SPAN></h2>
+	</f:view>
+<p>
+	<a href='kamene'>Fifteen puzzle</a>
+</p>
+
+<p>
+<a href='greeting.xhtml'>Guess the number</a>
+
+</p>
+
+</body>
+</html>
